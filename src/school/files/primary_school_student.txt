@@ -1,0 +1,6 @@
+
+Name: Ivan
+Last Name: P
+Age: 19
+AverageRating: 8.9
+Grade: PRIMARY_SCHOOL
