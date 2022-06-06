@@ -1,9 +1,9 @@
-package school;
+package school.main;
 
-import school.people.InfoManager;
+import school.base.Student;
+import school.people.employees.InfoManager;
 import school.people.students.*;
-import school.people.Teacher;
-import school.subjects.Grade;
+import school.people.employees.Teacher;
 
 import java.io.FileNotFoundException;
 
@@ -20,7 +20,7 @@ public class Main {
 
         Teacher teacher = new Teacher("T","S",56,25,1000,RUSSIAN, ENGLISH);
         Teacher teacher1 = new Teacher("Z","K",36,5,20000,HISTORY);
-        Student  student = new PreschoolStudent("Arsen","Y",34,9.9);
+        Student student = new PreschoolStudent("Arsen","Y",34,9.9);
         Student  student4 = new PreschoolStudent("Arsen1","Y",34,9.9);
         Student student1 = new HighSchoolStudent("Milena","H",25,7.9);
         Student student5 = new HighSchoolStudent("Milena2","H",25,7.9);

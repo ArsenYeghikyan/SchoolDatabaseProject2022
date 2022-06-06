@@ -1,6 +1,5 @@
-package school.people.students;
+package school.base;
 
-import school.people.Person;
 import school.subjects.Grade;
 
 import java.io.File;

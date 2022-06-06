@@ -1,6 +1,6 @@
 package school.functions;
 
-import school.people.Person;
+import school.base.Person;
 
 import java.io.File;
 import java.util.LinkedList;

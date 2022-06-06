@@ -1,7 +1,7 @@
-package school.people;
+package school.people.employees;
 
+import school.base.Employee;
 import school.subjects.AcademicSubjects;
-import school.subjects.Position;
 
 import java.util.Arrays;
 

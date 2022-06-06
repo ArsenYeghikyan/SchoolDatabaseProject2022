@@ -1,6 +1,6 @@
-package school.people;
+package school.people.employees;
 
-import school.people.Employee;
+import school.base.Employee;
 
 import static school.subjects.Position.CLEANER;
 

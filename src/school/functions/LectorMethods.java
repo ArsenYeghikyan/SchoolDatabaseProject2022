@@ -1,6 +1,6 @@
 package school.functions;
 
-import school.people.Teacher;
+import school.people.employees.Teacher;
 
 public interface LectorMethods {
 

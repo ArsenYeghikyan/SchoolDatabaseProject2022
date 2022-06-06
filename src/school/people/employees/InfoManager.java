@@ -1,8 +1,9 @@
-package school.people;
+package school.people.employees;
 
+import school.base.Student;
 import school.functions.SchoolInfoManagerMethods;
-import school.people.students.*;
-import school.subjects.Grade;
+import school.base.Employee;
+import school.base.Person;
 
 import java.io.*;
 import java.util.Comparator;

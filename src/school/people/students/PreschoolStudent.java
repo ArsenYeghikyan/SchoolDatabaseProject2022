@@ -1,10 +1,11 @@
 package school.people.students;
 
+import school.base.Student;
 import school.subjects.Grade;
 
 import java.io.File;
 
-public final class PreschoolStudent extends Student{
+public final class PreschoolStudent extends Student {
 
 
 

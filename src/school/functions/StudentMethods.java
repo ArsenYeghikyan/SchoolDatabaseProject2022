@@ -1,8 +1,6 @@
 package school.functions;
 
-import school.people.students.Student;
-
-import java.io.File;
+import school.base.Student;
 
 public interface StudentMethods {
 
