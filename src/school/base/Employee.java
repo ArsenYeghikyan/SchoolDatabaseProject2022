@@ -11,12 +11,12 @@ public abstract class Employee extends Person {
     private final Position position;
     private final int salary;
     private final int experience;
-    private final File employeesFile = new File("src" + File.separator
-            + "school" + File.separatorChar + "files" + File.separatorChar + "employeesFile.txt");
+
 
 
     public Employee(String name, String lastName, int age, Position position, int salary, int experience) {
-        super(name, lastName, age);
+        super(name, lastName, age,new File("src" + File.separator
+                + "school" + File.separatorChar + "files" + File.separatorChar + "employeesFile.txt"));
         this.position = position;
         this.salary = salary;
         this.experience = experience;
@@ -30,9 +30,9 @@ public abstract class Employee extends Person {
         return experience;
     }
 
-    public File getEmployeesFile() {
-        return employeesFile;
-    }
+//    public File getEmployeesFile() {
+//        return employeesFile;
+//    }
 
     @Override
     public String getPersonInfo() {

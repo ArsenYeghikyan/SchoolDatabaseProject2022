@@ -7,9 +7,17 @@ import java.io.File;
 
 public final class PreschoolStudent extends Student {
 
-
-
     public PreschoolStudent(String name, String lastName, int age, double averageRating) {
-        super(name, lastName, age, averageRating, Grade.PRESCHOOL,new File("src//school//files//", "preschool_student.txt"));
+        super(name, lastName, age, averageRating, Grade.PRESCHOOL);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        return super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 }

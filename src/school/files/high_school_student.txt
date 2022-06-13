@@ -1,6 +1,0 @@
-
-Name: Milena2
-Last Name: H
-Age: 25
-AverageRating: 7.9
-Grade: HIGH_SCHOOL

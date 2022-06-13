@@ -6,7 +6,23 @@ import school.subjects.Grade;
 import java.io.File;
 
 public final class HighSchoolStudent extends Student {
+
     public HighSchoolStudent(String name, String lastName, int age, double averageRating) {
-        super(name, lastName, age, averageRating, Grade.HIGH_SCHOOL,new File("src//school//files//", "high_school_student.txt"));
+        super(name, lastName, age, averageRating, Grade.HIGH_SCHOOL);
+    }
+
+
+
+
+
+
+    @Override
+    public boolean equals(Object o) {
+        return super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 }

@@ -11,14 +11,15 @@ public abstract class Student extends Person {
 
    private final Grade grade;
 
-   private final File studentInfoFile;
 
 
-    public Student(String name, String lastName, int age, double averageRating, Grade grade, File studentInfoFile) {
-        super(name, lastName, age);
+
+    public Student(String name, String lastName, int age, double averageRating, Grade grade) {
+        super(name, lastName, age,new File("src" + File.separator
+                + "school" + File.separatorChar + "files" + File.separatorChar + "students_info.txt"));
         this.averageRating = averageRating;
         this.grade = grade;
-        this.studentInfoFile = studentInfoFile;
+
     }
 
     public double getAverageRating() {
@@ -29,21 +30,19 @@ public abstract class Student extends Person {
         return grade;
     }
 
-    public File getStudentInfoFile() {
-        return studentInfoFile;
-    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Student)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
         Student student = (Student) o;
-        return Double.compare(student.getAverageRating(), getAverageRating()) == 0 && getGrade() == student.getGrade() && Objects.equals(studentInfoFile, student.studentInfoFile);
+        return Double.compare(student.averageRating, averageRating) == 0 && grade == student.grade;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getAverageRating(), getGrade(), studentInfoFile);
+        return Objects.hash(getAverageRating(), getGrade());
     }
 
     @Override

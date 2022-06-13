@@ -1,6 +1,0 @@
-
-Name: Arsen1
-Last Name: Y
-Age: 34
-AverageRating: 9.9
-Grade: PRESCHOOL

@@ -1,6 +1,0 @@
-
-Name: Ivan2
-Last Name: P2
-Age: 29
-AverageRating: 8.9
-Grade: SECONDARY_SCHOOL
