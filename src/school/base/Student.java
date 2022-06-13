@@ -47,8 +47,8 @@ public abstract class Student extends Person {
     }
 
     @Override
-    public String printInfo() {
-        return '\n'+super.printInfo() +"\nAverageRating: " +averageRating+
+    public String getPersonInfo() {
+        return '\n'+super.getPersonInfo() +"\nAverageRating: " +averageRating+
                 "\nGrade: "+ grade+'\n';
 
         //// dobawit parametry uchenika

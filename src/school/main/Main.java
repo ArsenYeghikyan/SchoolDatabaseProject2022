@@ -1,7 +1,7 @@
 package school.main;
 
 import school.base.Student;
-import school.people.employees.InfoManager;
+import school.people.employees.AccountManager;
 import school.people.students.*;
 import school.people.employees.Teacher;
 
@@ -11,7 +11,7 @@ import static school.subjects.AcademicSubjects.*;
 
 public class Main {
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
 
 
 
@@ -27,25 +27,24 @@ public class Main {
         Student student2 = new PrimarySchoolStudent("Ivan","P",19,8.9);
         Student student3 = new SecondarySchool("Ivan2","P2",29,8.9);
 
-        InfoManager infoManager =  new InfoManager();
+        AccountManager infoManager =  new AccountManager();
 
-        infoManager.writeEmployeesInfo(teacher1);
-        infoManager.writeStudentInfo(student2);
-        infoManager.writeStudentInfo(student4);
-        infoManager.writeStudentInfo(student5);
-        infoManager.writeStudentInfo(student1);
-        infoManager.writeStudentInfo(student);
-        infoManager.writeStudentInfo(student3);
-        infoManager.writeEmployeesInfo(teacher1);
-        infoManager.writeEmployeesInfo(teacher);
-        infoManager.writeEmployeesInfo(teacher);
-        infoManager.writeEmployeesInfo(teacher);
+        infoManager.setPersonInfo(teacher1);
+        infoManager.setPersonInfo(student2);
+        infoManager.setPersonInfo(student4);
+        infoManager.setPersonInfo(student5);
+        infoManager.setPersonInfo(student1);
+        infoManager.setPersonInfo(student);
+        infoManager.setPersonInfo(student3);
+        infoManager.setPersonInfo(teacher1);
+        infoManager.setPersonInfo(teacher);
+infoManager.findPerson(teacher,teacher.getEmployeesFile());
 //        infoManager.addTeacher(teacher);
 //        infoManager.addStudent(student1,student2);
 //School school = new School(students,teachers);
 
 
-
+infoManager.findPerson(teacher,teacher.getEmployeesFile());
 
 
     }

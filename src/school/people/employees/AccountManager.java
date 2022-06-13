@@ -10,7 +10,7 @@ import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.TreeSet;
 
-public final class InfoManager implements SchoolInfoManagerMethods {
+public final class AccountManager implements SchoolInfoManagerMethods {
 
 
     private final TreeSet<Employee> employees = new TreeSet<>(new Comparator<Employee>() {
@@ -29,42 +29,41 @@ public final class InfoManager implements SchoolInfoManagerMethods {
     });
 
 
-    public void writeEmployeesInfo(Employee employee) {
+    public void setPersonInfo(Employee employee) {
 
         employees.add(employee);
-try (Writer writer = new FileWriter(employee.getEmployeesFile())){
-    employees.forEach(emp -> {
-        try  {
+        try (Writer writer = new FileWriter(employee.getEmployeesFile())) {
+            employees.forEach(emp -> {
+                try {
 
-            writer.write(emp.printInfo());
-            writer.flush();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+                    writer.write(emp.getPersonInfo());
+                    writer.flush();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            });
+        } catch (Exception e) {
+            System.out.println(e);
         }
-    });
-}catch (Exception e){
-    System.out.println(e);
-}
 
 
     }
 
 
     @Override
-    public void writeStudentInfo(Student student) {
+    public void setPersonInfo(Student student) {
 
         students.add(student);
 
-      students.forEach(student1 ->  {
+        students.forEach(student1 -> {
             try (Writer writer = new FileWriter(student1.getStudentInfoFile());) {
 
-                writer.write(student1.printInfo());
+                writer.write(student1.getPersonInfo());
                 writer.flush();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
-    });
-
+        });
 
 
     }
@@ -74,13 +73,37 @@ try (Writer writer = new FileWriter(employee.getEmployeesFile())){
     public void deletePerson(Person personForDelete, File personFile) {
 
 
-
-
-
     }
 
     @Override
     public void findPerson(Person peronForFind, File personFile) {
+
+//      try(BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(personFile)))){
+//
+//         String name = bufferedReader.readLine() ;
+//
+//
+//
+//
+//         while (!(name .equals(peronForFind.getName()) )){
+//
+//                 System.out.println(peronForFind.getPersonInfo());
+//
+//
+//
+//         }
+//
+//
+//
+//
+//
+//
+//
+//      }catch (IOException e){
+//          System.out.println(e);
+//      }
+
+
 
     }
 

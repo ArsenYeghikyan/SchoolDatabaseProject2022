@@ -6,11 +6,10 @@ import school.base.Student;
 public interface SchoolInfoManagerMethods extends CommonMethods {
 
 
-    void writeEmployeesInfo(Employee employees);
+    void setPersonInfo(Employee employee);
 
-     void writeStudentInfo(Student sudent);
-
-
+     void setPersonInfo(Student student);
 
 
 }
+

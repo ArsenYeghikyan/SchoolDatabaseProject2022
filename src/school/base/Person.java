@@ -1,9 +1,9 @@
 package school.base;
 
 public abstract class Person {
-    private String name;
-    private String lastName;
-    private int age;
+    private final String name;
+    private final String lastName;
+    private final int age;
 
     public Person(String name, String lastName, int age) {
         this.name = name;
@@ -13,33 +13,22 @@ public abstract class Person {
 
 
 
-
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 
     public int getAge() {
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
 
-
-    public String printInfo(){
+    public String getPersonInfo(){
 
 
         return "Name: "+ getName()+"\nLast Name: "+getLastName()+"\nAge: "+getAge();

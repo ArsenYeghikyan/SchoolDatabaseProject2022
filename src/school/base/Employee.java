@@ -35,9 +35,9 @@ public abstract class Employee extends Person {
     }
 
     @Override
-    public String printInfo() {
+    public String getPersonInfo() {
 
-            return "Position: "+position+ '\n'+ super.printInfo()+"\nExp: "+getExperience()+"\nSalary: $"+getSalary();
+            return "Position: "+position+ '\n'+ super.getPersonInfo()+"\nExp: "+getExperience()+"\nSalary: $"+getSalary();
 
 
 

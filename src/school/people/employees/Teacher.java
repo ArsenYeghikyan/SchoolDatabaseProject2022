@@ -38,8 +38,8 @@ public final class Teacher extends Employee {
 
 
     @Override
-    public String printInfo() {
-        return '\n'+ super.printInfo()+'\n'+"Academic subjects: "+Arrays.toString(academicSubjects);
+    public String getPersonInfo() {
+        return '\n'+ super.getPersonInfo()+'\n'+"Academic subjects: "+Arrays.toString(academicSubjects);
 
 
 
@@ -47,6 +47,6 @@ public final class Teacher extends Employee {
 
     @Override
     public String toString() {
-        return printInfo();
+        return getPersonInfo();
     }
 }
