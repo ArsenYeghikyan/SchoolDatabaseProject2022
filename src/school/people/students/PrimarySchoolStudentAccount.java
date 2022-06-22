@@ -1,12 +1,10 @@
 package school.people.students;
 
-import school.base.Student;
+import school.base.StudentAccount;
 import school.subjects.Grade;
 
-import java.io.File;
-
-public final class PrimarySchoolStudent extends Student {
-    public PrimarySchoolStudent(String name, String lastName, int age, double averageRating) {
+public final class PrimarySchoolStudentAccount extends StudentAccount {
+    public PrimarySchoolStudentAccount(String name, String lastName, int age, double averageRating) {
         super(name, lastName, age, averageRating, Grade.PRIMARY_SCHOOL);
     }
 

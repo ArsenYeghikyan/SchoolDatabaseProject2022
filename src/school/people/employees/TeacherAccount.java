@@ -1,20 +1,20 @@
 package school.people.employees;
 
-import school.base.Employee;
+import school.base.EmployeeAccount;
 import school.subjects.AcademicSubjects;
 
 import java.util.Arrays;
 
 import static school.subjects.Position.*;
 
-public final class Teacher extends Employee {
+public final class TeacherAccount extends EmployeeAccount {
 
 
     private  final AcademicSubjects[] academicSubjects;
 /// napisat logiku , skolko predmetow mojet prepodawat
 
 
-    public Teacher(String name, String lastName, int age, int salary, int experience, AcademicSubjects... academicSubjects) {
+    public TeacherAccount(String name, String lastName, int age, int salary, int experience, AcademicSubjects... academicSubjects) {
         super(name, lastName, age, TEACHER, salary, experience);
         this.academicSubjects = academicSubjects;
     }
@@ -23,7 +23,7 @@ public final class Teacher extends Employee {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Teacher teacher = (Teacher) o;
+        TeacherAccount teacher = (TeacherAccount) o;
         return Arrays.equals(academicSubjects, teacher.academicSubjects);
     }
 
@@ -39,14 +39,11 @@ public final class Teacher extends Employee {
 
     @Override
     public String getPersonInfo() {
-        return '\n'+ super.getPersonInfo()+'\n'+"Academic subjects: "+Arrays.toString(academicSubjects);
+        return '\n'+ super.getPersonInfo()+'\n'+"Academic subjects: "+Arrays.toString(academicSubjects)+'\n';
 
 
 
     }
 
-    @Override
-    public String toString() {
-        return getPersonInfo();
-    }
+
 }

@@ -1,11 +1,11 @@
 package school.main;
 
-import school.base.Student;
-import school.people.employees.AccountManager;
+import school.base.EmployeeAccount;
+import school.base.StudentAccount;
+import school.people.employees.*;
 import school.people.students.*;
-import school.people.employees.Teacher;
 
-import java.io.FileNotFoundException;
+import java.security.Security;
 
 import static school.subjects.AcademicSubjects.*;
 
@@ -14,32 +14,27 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Teacher teacher = new Teacher("T","S",56,25,1000,RUSSIAN, ENGLISH);
-        Teacher teacher1 = new Teacher("Z","K",36,5,20000,HISTORY);
-        Student student = new PreschoolStudent("Arsen","Y",34,9.9);
-        Student  student4 = new PreschoolStudent("Arsen1","Y",34,9.9);
-        Student student1 = new HighSchoolStudent("Milena","H",25,7.9);
-        Student student5 = new HighSchoolStudent("Milena","H",25,7.9);
-        Student student2 = new PrimarySchoolStudent("Ivan","P",19,8.9);
-        Student student3 = new SecondarySchool("Ivan2","P2",29,8.9);
+        TeacherAccount teacher = new TeacherAccount("T", "S", 56, 25, 1000, RUSSIAN, ENGLISH);
+        CleanerAccount cleanerAccount = new CleanerAccount("Z", "K", 36, 5, 20000);
+        TeacherAccount teacher1 = new TeacherAccount("Z", "K", 36, 5, 20000, HISTORY);
+        PreschoolStudentAccount student = new PreschoolStudentAccount("Arsen", "Y", 34, 9.9);
+        Accountant accountant = new Accountant("Arsen1", "Y", 34, 99, 25);
+        SecurityAccount securityAccount = new SecurityAccount("Milena", "H", 25, 79, 5);
+        PrincipalAccount principalAccount = new PrincipalAccount("Milena", "H", 25, 79, 7);
+        StudentAccount student2 = new PrimarySchoolStudentAccount("Ivan", "P", 19, 8.9);
+        StudentAccount student3 = new SecondarySchoolAccount("Ivan2", "P2", 29, 8.9);
 
-        AccountManager infoManager =  new AccountManager();
+        AccountManager infoManager = new AccountManager();
 
-        infoManager.WriteEmployeeInfo(teacher1);
-        infoManager.WriteStudentsInfo(student2);
-        infoManager.WriteStudentsInfo(student4);
-        infoManager.WriteStudentsInfo(student5);
-        infoManager.WriteStudentsInfo(student1);
-        infoManager.WriteStudentsInfo(student);
-        infoManager.WriteStudentsInfo(student3);
-        infoManager.WriteEmployeeInfo(teacher1);
-        infoManager.WriteEmployeeInfo(teacher);
-        infoManager.WriteEmployeeInfo(teacher);
-        infoManager.WriteEmployeeInfo(teacher);
-
-
-
-
+        infoManager.WriteAccountsInfo(cleanerAccount);
+        infoManager.WriteAccountsInfo(teacher);
+        infoManager.WriteAccountsInfo(teacher1);
+        infoManager.WriteAccountsInfo(student);
+        infoManager.WriteAccountsInfo(securityAccount);
+        infoManager.WriteAccountsInfo(student2);
+        infoManager.WriteAccountsInfo(student3);
+        infoManager.WriteAccountsInfo(accountant);
+        infoManager.WriteAccountsInfo(principalAccount);
 
 
     }

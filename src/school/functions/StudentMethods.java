@@ -1,10 +1,10 @@
 package school.functions;
 
-import school.base.Student;
+import school.base.StudentAccount;
 
 public interface StudentMethods {
 
-    void findByHiMarks(Student student); // поиск из файла
+    void findByHiMarks(StudentAccount student); // поиск из файла
 
 
 

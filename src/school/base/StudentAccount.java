@@ -5,7 +5,7 @@ import school.subjects.Grade;
 import java.io.File;
 import java.util.Objects;
 
-public abstract class Student extends Person {
+public abstract class StudentAccount extends Account {
 
    private final double averageRating;
 
@@ -14,11 +14,12 @@ public abstract class Student extends Person {
 
 
 
-    public Student(String name, String lastName, int age, double averageRating, Grade grade) {
+    public StudentAccount(String name, String lastName, int age, double averageRating, Grade grade) {
         super(name, lastName, age,new File("src" + File.separator
                 + "school" + File.separatorChar + "files" + File.separatorChar + "students_info.txt"));
         this.averageRating = averageRating;
         this.grade = grade;
+
 
     }
 
@@ -34,15 +35,14 @@ public abstract class Student extends Person {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof StudentAccount that)) return false;
         if (!super.equals(o)) return false;
-        Student student = (Student) o;
-        return Double.compare(student.averageRating, averageRating) == 0 && grade == student.grade;
+        return Double.compare(that.getAverageRating(), getAverageRating()) == 0 && getGrade() == that.getGrade();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getAverageRating(), getGrade());
+        return Objects.hash(super.hashCode(), getAverageRating(), getGrade());
     }
 
     @Override
@@ -50,7 +50,7 @@ public abstract class Student extends Person {
         return '\n'+super.getPersonInfo() +"\nAverageRating: " +averageRating+
                 "\nGrade: "+ grade+'\n';
 
-        //// dobawit parametry uchenika
+
 
 
     }

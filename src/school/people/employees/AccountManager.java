@@ -1,9 +1,9 @@
 package school.people.employees;
 
-import school.base.Student;
+import school.base.StudentAccount;
 import school.functions.SchoolInfoManagerMethods;
-import school.base.Employee;
-import school.base.Person;
+import school.base.EmployeeAccount;
+import school.base.Account;
 
 import java.io.*;
 import java.util.Comparator;
@@ -12,160 +12,80 @@ import java.util.TreeSet;
 
 public final class AccountManager implements SchoolInfoManagerMethods {
 
+    private final TreeSet<EmployeeAccount> employees = new TreeSet<>(Comparator.comparing(Account::getName));
 
-    private final TreeSet<Employee> employees = new TreeSet<>(Comparator.comparing(Person::getName));
-
-
-    private final TreeSet<Student> students = new TreeSet<>(Comparator.comparing(Person::getName));
+    private final TreeSet<StudentAccount> students = new TreeSet<>(Comparator.comparing(Account::getName));
 
 
+    public void addAccount(Account account) {
 
-@Override
-    public void WriteEmployeeInfo(Employee person) {
+        if (account instanceof StudentAccount) {
+            students.add((StudentAccount) account);
 
-        employees.add(person);
-        try (OutputStreamWriter br = new OutputStreamWriter(
-                new FileOutputStream(
-                        person.getPersonFile()))) {
-
-
-
-            employees.forEach(emp -> {
-                try {
-
-                    br.write(emp.getPersonInfo());
-                    br.flush();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            });
-        } catch (Exception e) {
-            e.printStackTrace();
+        } else if (account instanceof EmployeeAccount) {
+            employees.add((EmployeeAccount) account);
         }
 
 
     }
 
+
+    public TreeSet<? extends Account> checkAccount(Account account) {
+
+        if (account instanceof StudentAccount) {
+            return students;
+        }
+        return employees;
+
+    }
+
+
     @Override
-    public void WriteStudentsInfo(Student  student) {
+    public void WriteAccountsInfo(Account account) {
 
-        students.add(student);
-        try (OutputStreamWriter br = new OutputStreamWriter(
-                new FileOutputStream(
-                        student.getPersonFile()))) {
+        addAccount(account);
 
+        try (FileOutputStream fos = new FileOutputStream(account.getAccountFile())) {
 
-
-            students.forEach(emp -> {
+            checkAccount(account).forEach(account1 -> {
                 try {
+                    fos.write(account1.getPersonInfo().getBytes());
 
-                    br.write(emp.getPersonInfo());
-                    br.flush();
+                    fos.flush();
                 } catch (IOException e) {
-                    throw new RuntimeException(e);
+                    e.printStackTrace();
                 }
+
             });
+
         } catch (Exception e) {
             e.printStackTrace();
 
         }
 
-
     }
-
-    @Override
-    public void WriteEmployeesInfo(TreeSet<? extends Person> accounts, Person  person) {
-        try (OutputStreamWriter br = new OutputStreamWriter(
-                new FileOutputStream(person.getPersonFile()))) {
-
-
-
-            accounts.forEach(emp -> {
-                try {
-
-                    br.write(emp.getPersonInfo());
-                    br.flush();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            });
-        } catch (Exception e) {
-            e.printStackTrace();
-
-        }
-
-
-
-
-
-
-    }
-
-//    @Override
-//    public void setPersonInfo(Student student) {
-//
-//        students.add(student);
-//
-//        students.forEach(student1 -> {
-//            try (Writer writer = new FileWriter(student1.getPersonFile());) {
-//
-//                writer.write(student1.getPersonInfo());
-//                writer.flush();
-//            } catch (IOException e) {
-//                throw new RuntimeException(e);
-//            }
-//        });
-//
-//
-//    }
 
 
     @Override
-    public void deletePerson(Person personForDelete, File personFile) {
+    public void deletePerson(Account personForDelete, File personFile) {
 
 
     }
 
     @Override
-    public void findPerson(Person peronForFind, File personFile) {
-
-      try(BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(personFile)))){
-
-         String name = bufferedReader.readLine() ;
-
-
-
-
-         while (!(name .equals(peronForFind.getName()) )){
-
-                 System.out.println(peronForFind.getPersonInfo());
-
-
-
-         }
-
-
-
-
-
-
-
-      }catch (IOException e){
-          e.printStackTrace();
-
-      }
-
+    public void findPerson(Account peronForFind, File personFile) {
 
 
     }
 
+
     @Override
-    public void sortPersonByName(LinkedList<Person> people, File personFile) {
+    public void sortPersonByName(LinkedList<Account> people, File personFile) {
 
     }
 
     @Override
-    public void replacePerson(Person personForReplace, Person newPerson, File personFile) {
+    public void replacePerson(Account personForReplace, Account newPerson, File personFile) {
 
     }
 }

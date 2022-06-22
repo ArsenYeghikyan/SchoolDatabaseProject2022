@@ -1,10 +1,10 @@
 package school.functions;
 
-import school.people.employees.Teacher;
+import school.people.employees.TeacherAccount;
 
 public interface LectorMethods {
 
-    void findTeacherBySubject(Teacher teacher);
+    void findTeacherBySubject(TeacherAccount teacher);
 
 
 
