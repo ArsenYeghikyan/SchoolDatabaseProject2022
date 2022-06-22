@@ -1,0 +1,31 @@
+
+Position: ACCOUNTANT
+Name: Arsen1
+Last Name: Y
+Age: 34
+Exp: 25
+Salary: $99
+
+Position: SECURITY
+Name: Milena
+Last Name: H
+Age: 25
+Exp: 5
+Salary: $79
+
+
+Position: TEACHER
+Name: T
+Last Name: S
+Age: 56
+Exp: 1000
+Salary: $25
+
+Academic subjects: [RUSSIAN, ENGLISH]
+
+Position: CLEANER
+Name: Z
+Last Name: K
+Age: 36
+Exp: 20000
+Salary: $5
