@@ -23,6 +23,20 @@ public abstract class EmployeeAccount extends Account {
 
     }
 
+
+//    private int setSalary(int salary){
+//
+//        if
+//
+//
+//    }
+
+
+
+
+
+
+
     public int getSalary() {
         return salary;
     }

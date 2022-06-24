@@ -11,7 +11,7 @@ public enum AcademicSubjects {
     GEOMETRY("GEOMETRY");
 
 
-    String subjectName;
+    final String subjectName;
 
     AcademicSubjects(String subjectName) {
         this.subjectName = subjectName;

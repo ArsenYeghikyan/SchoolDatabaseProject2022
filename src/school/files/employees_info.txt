@@ -13,15 +13,12 @@ Age: 25
 Exp: 5
 Salary: $79
 
-
-Position: TEACHER
-Name: T
-Last Name: S
-Age: 56
-Exp: 1000
-Salary: $25
-
-Academic subjects: [RUSSIAN, ENGLISH]
+Position: NURSE
+Name: Milena Nurse
+Last Name: H2
+Age: 25
+Exp: 7
+Salary: $79
 
 Position: CLEANER
 Name: Z
@@ -29,3 +26,13 @@ Last Name: K
 Age: 36
 Exp: 20000
 Salary: $5
+
+
+Position: TEACHER
+Name: ZZ
+Last Name: K
+Age: 36
+Exp: 20000
+Salary: $5
+
+Academic subjects: [HISTORY]

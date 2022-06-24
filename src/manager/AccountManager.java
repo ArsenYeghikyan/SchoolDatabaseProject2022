@@ -1,4 +1,4 @@
-package school.people.employees;
+package manager;
 
 import school.base.StudentAccount;
 import school.functions.SchoolInfoManagerMethods;
@@ -19,12 +19,14 @@ public final class AccountManager implements SchoolInfoManagerMethods {
 
     public void addAccount(Account account) {
 
-        if (account instanceof StudentAccount) {
-            students.add((StudentAccount) account);
 
-        } else if (account instanceof EmployeeAccount) {
-            employees.add((EmployeeAccount) account);
-        }
+            if (account instanceof StudentAccount) {
+                students.add((StudentAccount) account);
+
+            } else if (account instanceof EmployeeAccount) {
+                employees.add((EmployeeAccount) account);
+            }
+
 
 
     }
@@ -43,7 +45,9 @@ public final class AccountManager implements SchoolInfoManagerMethods {
     @Override
     public void WriteAccountsInfo(Account account) {
 
-        addAccount(account);
+    addAccount(account);
+
+
 
         try (FileOutputStream fos = new FileOutputStream(account.getAccountFile())) {
 
@@ -58,8 +62,11 @@ public final class AccountManager implements SchoolInfoManagerMethods {
 
             });
 
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (NullPointerException exception){
+            System.out.println("You entered an empty value, please try again");
+        }
+        catch (Exception e) {
+            System.out.println("oops!");
 
         }
 
