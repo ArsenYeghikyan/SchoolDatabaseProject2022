@@ -1,4 +1,4 @@
-package manager;
+package school.manager;
 
 import school.base.StudentAccount;
 import school.functions.SchoolInfoManagerMethods;

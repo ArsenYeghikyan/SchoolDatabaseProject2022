@@ -2,9 +2,11 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/dataout.txt" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/src/manager/AccountManager.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/school" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/school/base/EmployeeAccount.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/school/manager" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/school/manager/AccountManager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/school/manager/AccountManager.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/school/menu/Menu.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/school/people/Teacher1.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/school/people/employees/Accountant.java" charset="UTF-8" />

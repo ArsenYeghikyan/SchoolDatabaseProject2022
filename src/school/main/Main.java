@@ -1,6 +1,6 @@
 package school.main;
 
-import manager.AccountManager;
+import school.manager.AccountManager;
 import school.base.StudentAccount;
 import school.people.employees.*;
 import school.people.students.*;
