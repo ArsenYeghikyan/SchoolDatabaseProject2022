@@ -1,16 +1,15 @@
 package school.manager;
 
 import school.base.StudentAccount;
-import school.functions.SchoolInfoManagerMethods;
+import school.functions.BaseAccountFileManager;
 import school.base.EmployeeAccount;
 import school.base.Account;
 
 import java.io.*;
 import java.util.Comparator;
-import java.util.LinkedList;
 import java.util.TreeSet;
 
-public final class AccountManager implements SchoolInfoManagerMethods {
+public final class AccountManager implements BaseAccountFileManager {
 
     private final TreeSet<EmployeeAccount> employees = new TreeSet<>(Comparator.comparing(Account::getName));
 
@@ -74,25 +73,21 @@ public final class AccountManager implements SchoolInfoManagerMethods {
 
 
     @Override
-    public void deletePerson(Account personForDelete, File personFile) {
+    public void deleteAccount(Account personForDelete, File personFile) {
 
 
     }
 
     @Override
-    public void findPerson(Account peronForFind, File personFile) {
+    public void findAccount(Account peronForFind, File personFile) {
 
 
     }
 
 
-    @Override
-    public void sortPersonByName(LinkedList<Account> people, File personFile) {
-
-    }
 
     @Override
-    public void replacePerson(Account personForReplace, Account newPerson, File personFile) {
+    public void replaceAccount(Account personForReplace, Account newAccount, File accountFile) {
 
     }
 }

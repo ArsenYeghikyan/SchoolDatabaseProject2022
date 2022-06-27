@@ -1,10 +1,15 @@
 package school.functions;
 
+import school.base.Account;
 import school.people.employees.TeacherAccount;
 
-public interface LectorMethods {
+import java.io.File;
+
+public interface LectorFileManager {
 
     void findTeacherBySubject(TeacherAccount teacher);
+
+
 
 
 

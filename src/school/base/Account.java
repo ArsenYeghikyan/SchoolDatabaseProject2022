@@ -4,28 +4,20 @@ import java.io.File;
 import java.util.Objects;
 
 public abstract class Account {
-    private  String name;
-    private  String lastName;
+    private final   String name;
+    private final   String lastName;
     private int age;
 
-    private  File accountFile;
+    private final   File accountFile;
 
     public Account(String name, String lastName, int age, File accountFile) {
-        setName(name);
-        setLastName(lastName);
-        setAge(age);
-        setAccountFile(accountFile);
-
-    }
-
-    private void setName(String name) {
-
         this.name = name;
+        this.lastName=lastName;
+        setAge(age);
+        this.accountFile = accountFile;
+
     }
 
-    private void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 
     private void setAge(int age) {
         if (age <= 0) {
@@ -35,15 +27,6 @@ public abstract class Account {
             this.age = age;
         }
     }
-
-
-    private void setAccountFile(File accountFile) {
-        this.accountFile = accountFile;
-    }
-
-
-
-
 
 
 
