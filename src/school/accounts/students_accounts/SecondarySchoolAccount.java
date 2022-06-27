@@ -1,7 +1,7 @@
-package school.people.students;
+package school.accounts.students_accounts;
 
 import school.base.StudentAccount;
-import school.subjects.Grade;
+import school.students_grade.Grade;
 
 public final class SecondarySchoolAccount extends StudentAccount {
 

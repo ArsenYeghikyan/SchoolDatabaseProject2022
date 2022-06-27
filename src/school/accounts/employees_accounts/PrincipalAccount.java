@@ -1,8 +1,8 @@
-package school.people.employees;
+package school.accounts.employees_accounts;
 
 import school.base.EmployeeAccount;
 
-import static school.subjects.Position.PRINCIPAL;
+import static school.employe_position.Position.PRINCIPAL;
 
 public final class PrincipalAccount extends EmployeeAccount {
 

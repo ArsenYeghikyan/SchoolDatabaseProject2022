@@ -1,4 +1,4 @@
-package school.subjects;
+package school.acadmic_subjects;
 
 public enum AcademicSubjects {
 

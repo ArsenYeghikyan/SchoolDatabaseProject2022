@@ -1,11 +1,11 @@
-package school.people.employees;
+package school.accounts.employees_accounts;
 
 import school.base.EmployeeAccount;
-import school.subjects.AcademicSubjects;
+import school.acadmic_subjects.AcademicSubjects;
 
 import java.util.Arrays;
 
-import static school.subjects.Position.*;
+import static school.employe_position.Position.*;
 
 public final class TeacherAccount extends EmployeeAccount {
 

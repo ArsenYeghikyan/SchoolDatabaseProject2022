@@ -1,6 +1,6 @@
 package school.base;
 
-import school.subjects.Position;
+import school.employe_position.Position;
 
 import java.io.File;
 import java.util.Objects;

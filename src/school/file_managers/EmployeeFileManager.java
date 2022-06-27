@@ -1,4 +1,4 @@
-package school.functions;
+package school.file_managers;
 
 public interface EmployeeFileManager {
 }

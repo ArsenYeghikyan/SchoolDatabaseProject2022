@@ -1,4 +1,4 @@
-package school.subjects;
+package school.employe_position;
 
 public enum Position {
 

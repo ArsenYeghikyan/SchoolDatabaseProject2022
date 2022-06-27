@@ -1,7 +1,7 @@
-package school.manager;
+package school.account_manager;
 
 import school.base.StudentAccount;
-import school.functions.BaseAccountFileManager;
+import school.file_managers.BaseAccountFileManager;
 import school.base.EmployeeAccount;
 import school.base.Account;
 

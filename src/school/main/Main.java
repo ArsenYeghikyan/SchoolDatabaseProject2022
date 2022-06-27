@@ -1,11 +1,11 @@
 package school.main;
 
-import school.manager.AccountManager;
+import school.account_manager.AccountManager;
 import school.base.StudentAccount;
-import school.people.employees.*;
-import school.people.students.*;
+import school.accounts.employees_accounts.*;
+import school.accounts.students_accounts.*;
 
-import static school.subjects.AcademicSubjects.*;
+import static school.acadmic_subjects.AcademicSubjects.*;
 
 public class Main {
 

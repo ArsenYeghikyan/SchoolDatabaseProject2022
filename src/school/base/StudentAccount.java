@@ -1,6 +1,6 @@
 package school.base;
 
-import school.subjects.Grade;
+import school.students_grade.Grade;
 
 import java.io.File;
 import java.util.Objects;

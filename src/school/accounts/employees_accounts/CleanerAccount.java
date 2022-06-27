@@ -1,9 +1,8 @@
-package school.people.employees;
+package school.accounts.employees_accounts;
 
 import school.base.EmployeeAccount;
-import school.subjects.Position;
 
-import static school.subjects.Position.CLEANER;
+import static school.employe_position.Position.CLEANER;
 
 public final class CleanerAccount extends EmployeeAccount {
 

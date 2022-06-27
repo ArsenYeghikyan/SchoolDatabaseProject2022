@@ -1,8 +1,8 @@
-package school.people.employees;
+package school.accounts.employees_accounts;
 
 import school.base.EmployeeAccount;
 
-import static school.subjects.Position.NURSE;
+import static school.employe_position.Position.NURSE;
 
 public final class NurseAccount extends EmployeeAccount {
     public NurseAccount(String name, String lastName, int age, int salary, int experience) {
