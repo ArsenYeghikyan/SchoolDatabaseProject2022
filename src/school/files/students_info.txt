@@ -1,4 +1,10 @@
 
+Name: Armen
+Last Name: Petrov
+Age: 19
+AverageRating: 8.9
+Grade: HIGH_SCHOOL
+
 Name: Arsen
 Last Name: Y
 Age: 34
@@ -15,4 +21,4 @@ Name: Ivan2
 Last Name: P2
 Age: 29
 AverageRating: 8.9
-Grade: HIGH_SCHOOL
+Grade: SECONDARY_SCHOOL

@@ -60,7 +60,7 @@ public abstract class Account {
         return Objects.hash(getName(), getLastName(), getAge(), getAccountFile());
     }
 
-    public String getPersonInfo() {
+    public String getAccountInfo() {
 
 
         return "Name: " + getName() + "\nLast Name: " + getLastName() + "\nAge: " + getAge();

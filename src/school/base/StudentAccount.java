@@ -46,9 +46,9 @@ public abstract class StudentAccount extends Account {
     }
 
     @Override
-    public String getPersonInfo() {
-        return '\n'+super.getPersonInfo() +"\nAverageRating: " +averageRating+
-                "\nGrade: "+ grade+'\n';
+    public String getAccountInfo() {
+        return '\n'+super.getAccountInfo() +"\nAverageRating: " +getAverageRating()+
+                "\nGrade: "+ getGrade()+'\n';
 
 
 

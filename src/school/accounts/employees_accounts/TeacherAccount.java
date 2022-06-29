@@ -38,8 +38,8 @@ public final class TeacherAccount extends EmployeeAccount {
 
 
     @Override
-    public String getPersonInfo() {
-        return '\n'+ super.getPersonInfo()+'\n'+"Academic subjects: "+Arrays.toString(academicSubjects)+'\n';
+    public String getAccountInfo() {
+        return "\nAcademic subjects: "+Arrays.toString(academicSubjects)+ super.getAccountInfo();
 
 
 

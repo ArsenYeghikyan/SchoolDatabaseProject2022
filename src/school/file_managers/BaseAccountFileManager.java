@@ -2,19 +2,17 @@ package school.file_managers;
 
 import school.base.Account;
 
-import java.io.File;
-
 public interface BaseAccountFileManager {
 
 
-    void  WriteAccountsInfo(Account account);
+    void CreateAccountInfo(Account account);
 
-    void deleteAccount(Account personForDelete, File personFile) ;
+    void deleteAccount(Account accountForDelete) ;
 
-    void findAccount(Account peronForFind, File personFile);
+     void findAccount(Account accountInSearch);
 
 
-    void replaceAccount(Account AccountForReplace, Account newAccount, File accountFile);
+    void replaceAccount(Account AccountForReplace, Account newAccount);
 
 
 

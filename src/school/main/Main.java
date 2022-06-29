@@ -12,9 +12,10 @@ public class Main {
     public static void main(String[] args) {
 
 
-        TeacherAccount teacher = new TeacherAccount("ZZ", "K", 36, 5, 20000, HISTORY);
-        CleanerAccount cleanerAccount = new CleanerAccount("Z", "K", 36, 5, 20000);
-        TeacherAccount teacher1 = new TeacherAccount("Z", "K", 36, 5, 20000, HISTORY);
+        TeacherAccount teacher = new TeacherAccount("Armen", "Kirakosyan", 36, 5, 20000, HISTORY);
+        CleanerAccount cleanerAccount = new CleanerAccount("Z", "K", 36, 5, 30000);
+        TeacherAccount teacher1 = new TeacherAccount("Z", "K", 36, 5, 50000, GEOMETRY, DRAWING);
+        TeacherAccount teacher2 = new TeacherAccount("4", "K", 36, 5, 10000,  DRAWING);
 
         Accountant accountant = new Accountant("Arsen1", "Y", 34, 99, 25);
         SecurityAccount securityAccount = new SecurityAccount("Milena", "H", 25, 79, 5);
@@ -24,22 +25,25 @@ public class Main {
 
         StudentAccount student2 = new PrimarySchoolStudentAccount("Ivan", "P", 19, 8.9);
         SecondarySchoolAccount student3 = new SecondarySchoolAccount("Ivan2", "P2", 29, 8.9);
-        HighSchoolStudentAccount student4 = new HighSchoolStudentAccount("Ivan2", "P2", 29, 8.9);
+        HighSchoolStudentAccount student4 = new HighSchoolStudentAccount("Armen", "Petrov", 19, 8.9);
         PreschoolStudentAccount student = new PreschoolStudentAccount("Arsen", "Y", 34, 9.9);
 
-        AccountManager infoManager = new AccountManager();
+        AccountManager manager = new AccountManager();
 
-        infoManager.WriteAccountsInfo(cleanerAccount);
-        infoManager.WriteAccountsInfo(student4);
-        infoManager.WriteAccountsInfo(nurseAccount);
-        infoManager.WriteAccountsInfo(teacher);
-        infoManager.WriteAccountsInfo(teacher1);
-        infoManager.WriteAccountsInfo(student);
-        infoManager.WriteAccountsInfo(securityAccount);
-        infoManager.WriteAccountsInfo(student2);
-        infoManager.WriteAccountsInfo(student3);
-        infoManager.WriteAccountsInfo(accountant);
-        infoManager.WriteAccountsInfo(principalAccount);
+        manager.CreateAccountInfo(cleanerAccount);
+        manager.CreateAccountInfo(student4);
+        manager.CreateAccountInfo(nurseAccount);
+        manager.CreateAccountInfo(teacher);
+        manager.CreateAccountInfo(teacher1);
+        manager.CreateAccountInfo(teacher2);
+        manager.CreateAccountInfo(student);
+        manager.CreateAccountInfo(securityAccount);
+        manager.CreateAccountInfo(student2);
+        manager.CreateAccountInfo(student3);
+        manager.CreateAccountInfo(accountant);
+        manager.CreateAccountInfo(principalAccount);
+
+//        manager.deleteAccount(student);
 
 
     }

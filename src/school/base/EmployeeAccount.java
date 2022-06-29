@@ -24,19 +24,6 @@ public abstract class EmployeeAccount extends Account {
     }
 
 
-//    private int setSalary(int salary){
-//
-//        if
-//
-//
-//    }
-
-
-
-
-
-
-
     public int getSalary() {
         return salary;
     }
@@ -65,12 +52,9 @@ public abstract class EmployeeAccount extends Account {
     }
 
     @Override
-    public String getPersonInfo() {
+    public String getAccountInfo() {
 
-            return '\n'+"Position: "+position+ '\n'+ super.getPersonInfo()+"\nExp: "+getExperience()+"\nSalary: $"+getSalary()+'\n';
-
-
-
+            return '\n'+"Position: "+getPosition()+ '\n'+ super.getAccountInfo()+"\nExp: "+getExperience()+"\nSalary: $"+getSalary()+'\n';
 
     }
 

@@ -1,4 +1,20 @@
 
+Academic subjects: [DRAWING]
+Position: TEACHER
+Name: 4
+Last Name: K
+Age: 36
+Exp: 10000
+Salary: $5
+
+Academic subjects: [HISTORY]
+Position: TEACHER
+Name: Armen
+Last Name: Kirakosyan
+Age: 36
+Exp: 20000
+Salary: $5
+
 Position: ACCOUNTANT
 Name: Arsen1
 Last Name: Y
@@ -24,15 +40,5 @@ Position: CLEANER
 Name: Z
 Last Name: K
 Age: 36
-Exp: 20000
+Exp: 30000
 Salary: $5
-
-
-Position: TEACHER
-Name: ZZ
-Last Name: K
-Age: 36
-Exp: 20000
-Salary: $5
-
-Academic subjects: [HISTORY]

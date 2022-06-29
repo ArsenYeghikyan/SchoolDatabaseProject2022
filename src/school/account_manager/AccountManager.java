@@ -16,22 +16,21 @@ public final class AccountManager implements BaseAccountFileManager {
     private final TreeSet<StudentAccount> students = new TreeSet<>(Comparator.comparing(Account::getName));
 
 
-    public void addAccount(Account account) {
+    private void addAccount(Account account) {
 
 
-            if (account instanceof StudentAccount) {
-                students.add((StudentAccount) account);
+        if (account instanceof StudentAccount) {
+            students.add((StudentAccount) account);
 
-            } else if (account instanceof EmployeeAccount) {
-                employees.add((EmployeeAccount) account);
-            }
-
+        } else if (account instanceof EmployeeAccount) {
+            employees.add((EmployeeAccount) account);
+        }
 
 
     }
 
 
-    public TreeSet<? extends Account> checkAccount(Account account) {
+    private TreeSet<? extends Account> checkAccount(Account account) {
 
         if (account instanceof StudentAccount) {
             return students;
@@ -42,52 +41,82 @@ public final class AccountManager implements BaseAccountFileManager {
 
 
     @Override
-    public void WriteAccountsInfo(Account account) {
+    public void CreateAccountInfo(Account account) {
 
-    addAccount(account);
+        addAccount(account);
+        writingInfo(account);
+
+    }
 
 
+    @Override
+    public void deleteAccount(Account accountForDelete) {
 
-        try (FileOutputStream fos = new FileOutputStream(account.getAccountFile())) {
+        checkAccount(accountForDelete).remove(accountForDelete);
 
-            checkAccount(account).forEach(account1 -> {
+
+        writingInfo(accountForDelete);
+
+    }
+
+
+    private void writingInfo(Account account) {
+        try (BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream((account.getAccountFile()))))) {
+
+            checkAccount(account).forEach(acc -> {
                 try {
-                    fos.write(account1.getPersonInfo().getBytes());
+                    bw.write(acc.getAccountInfo());
 
-                    fos.flush();
+                    bw.flush();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
             });
 
-        } catch (NullPointerException exception){
+        } catch (NullPointerException exception) {
             System.out.println("You entered an empty value, please try again");
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             System.out.println("oops!");
 
         }
 
-    }
-
-
-    @Override
-    public void deleteAccount(Account personForDelete, File personFile) {
-
-
-    }
-
-    @Override
-    public void findAccount(Account peronForFind, File personFile) {
-
 
     }
 
 
+    @Override
+    public void findAccount(Account accountInSearch) {
+
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(accountInSearch.getAccountFile())))) {
+
+
+            String str;
+
+            while ((str = br.readLine()) != null) {
+
+                if (str.equals("Name: " + accountInSearch.getName())) {
+                    System.out.println(accountInSearch.getAccountInfo());
+                }
+
+
+            }
+
+
+        } catch (IOException e) {
+            System.out.println("IOException");
+        }
+
+
+    }
+
 
     @Override
-    public void replaceAccount(Account personForReplace, Account newAccount, File accountFile) {
+    public void replaceAccount(Account personForReplace, Account newAccount) {
+
+        deleteAccount(personForReplace);
+        writingInfo(newAccount);
+
 
     }
 }
