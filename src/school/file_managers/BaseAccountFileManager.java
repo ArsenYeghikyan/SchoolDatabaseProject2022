@@ -5,7 +5,7 @@ import school.base.Account;
 public interface BaseAccountFileManager {
 
 
-    void CreateAccountInfo(Account account);
+    void createAccountInfo(Account account);
 
     void deleteAccount(Account accountForDelete) ;
 

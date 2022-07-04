@@ -41,7 +41,7 @@ public final class AccountManager implements BaseAccountFileManager {
 
 
     @Override
-    public void CreateAccountInfo(Account account) {
+    public void createAccountInfo(Account account) {
 
         addAccount(account);
         writingInfo(account);

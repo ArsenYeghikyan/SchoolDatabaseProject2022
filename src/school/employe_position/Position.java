@@ -1,6 +1,6 @@
 package school.employe_position;
 
-public enum Position {
+public  enum Position {
 
     PRINCIPAL("PRINCIPAL"),
     TEACHER("TEACHER"),
