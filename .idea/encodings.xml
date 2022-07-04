@@ -2,6 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/dataout.txt" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/FilesEX.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/school" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/school/account_manager" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/school/account_manager/AccountManager.java" charset="windows-1251" />
