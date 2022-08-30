@@ -30,18 +30,18 @@ public class Main {
 
         AccountManager manager = new AccountManager();
 
-        manager.CreateAccountInfo(cleanerAccount);
-        manager.CreateAccountInfo(student4);
-        manager.CreateAccountInfo(nurseAccount);
-        manager.CreateAccountInfo(teacher);
-        manager.CreateAccountInfo(teacher1);
-        manager.CreateAccountInfo(teacher2);
-        manager.CreateAccountInfo(student);
-        manager.CreateAccountInfo(securityAccount);
-        manager.CreateAccountInfo(student2);
-        manager.CreateAccountInfo(student3);
-        manager.CreateAccountInfo(accountant);
-        manager.CreateAccountInfo(principalAccount);
+        manager.createAccountInfo(cleanerAccount);
+        manager.createAccountInfo(student4);
+        manager.createAccountInfo(nurseAccount);
+        manager.createAccountInfo(teacher);
+        manager.createAccountInfo(teacher1);
+        manager.createAccountInfo(teacher2);
+        manager.createAccountInfo(student);
+        manager.createAccountInfo(securityAccount);
+        manager.createAccountInfo(student2);
+        manager.createAccountInfo(student3);
+        manager.createAccountInfo(accountant);
+        manager.createAccountInfo(principalAccount);
 
 //        manager.deleteAccount(student);
 
