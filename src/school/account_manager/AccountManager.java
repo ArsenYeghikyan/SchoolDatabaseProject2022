@@ -17,26 +17,41 @@ public final class AccountManager implements BaseAccountFileManager {
 
 
     private void addAccount(Account account) {
+//---------------------------------------------------------------------------------
+//  old version
+//        if (account instanceof StudentAccount) {
+//            students.add((StudentAccount) account);
+//
+//        } else if (account instanceof EmployeeAccount) {
+//            employees.add((EmployeeAccount) account);
+//        }
+//---------------------------------------------------------------------------------
+        // new version Java 17+
 
+        switch (account) {
+            case StudentAccount st -> students.add(st);
+            case EmployeeAccount emp -> employees.add(emp);
 
-        if (account instanceof StudentAccount) {
-            students.add((StudentAccount) account);
-
-        } else if (account instanceof EmployeeAccount) {
-            employees.add((EmployeeAccount) account);
+            default -> throw new IllegalStateException("Unexpected value: " + account);
         }
-
 
     }
 
 
     private TreeSet<? extends Account> checkAccount(Account account) {
-
-        if (account instanceof StudentAccount) {
-            return students;
-        }
-        return employees;
-
+  //---------------------------------------------------------------------------------
+     //   old version
+//        if (account instanceof StudentAccount) {
+//            return students;
+//        }
+//        return employees;
+//--------------------------------------------------------------------------
+// new version Java 17+
+        return switch (account) {
+            case StudentAccount st -> students;
+            case EmployeeAccount emp -> employees;
+            default -> throw new IllegalStateException("Unexpected value: " + account);
+        };
     }
 
 
